@@ -1,0 +1,571 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #f9a66a;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.7rem 2rem;
+  color: white;
+  position: relative;
+  z-index: 100;
+  box-shadow: 0 1px 6px 1px #00b4d8;
+;
+}
+
+header p{
+  color:red;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.centerLink ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.centerLink a {
+  text-decoration: none;
+  color: rgb(62, 61, 61);
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+
+.centerLink a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background-color: #fff;
+  transition: width 0.3s;
+}
+
+.centerLink a:hover::after {
+  width: 100%;
+}
+
+.centerLink a:hover {
+  color: #ffe;
+  transform: translateY(-2px);
+}
+
+
+/* ========= Burger Menu Icon ========= */
+.icon {
+ display: none; 
+  font-size: 7.5rem;
+  cursor: pointer;
+  color:red;
+}
+
+
+
+/* Show when active */
+.centerLink.active {
+  display: block;
+}
+
+
+
+h2, h3 {
+  color: #005f73;
+}
+
+
+
+/* Hero Section */
+/* Hero Section */
+/* Hero Section */ 
+
+
+.introsection {
+  height: 100vh;
+  /* background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); */
+  background:url(./pictufe/doco\ 1.png);
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.introsection p {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.introsection button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #00b4d8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.introsection button:hover {
+  background-color: #0077b6;
+}
+
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
+  animation: fadeIn 1s ease-in-out;
+} 
+
+.huty{
+  background-color: rgb(18, 17, 17);
+}
+ .aboutintro {
+  flex: 1 1 300px;
+  max-width: 350px;
+  background: linear-gradient(160deg, #ffffff, #f1f8e9);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideUp 0.8s ease forwards;
+}
+
+.aboutintro:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.aboutintro:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.aboutintro:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.aboutintro:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0,6, 0.15);
+}
+
+
+/* Services Section */
+/* Services Section */
+/* Services Section */
+/* Reset and base styles */
+
+/* Section Styling */
+/* Container for the entire services section */
+.services {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Section heading */
+.services > h3 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #1a3e72;
+}
+
+/* Intro paragraph */
+.services > p {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 35px;
+  color: #555;
+}
+
+/* Flex container for the service list */
+.five-list-service {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+  margin-bottom: 50px;
+  gap:111px;
+}
+
+  
+
+/* Food hygiene nested list container */
+.foodhyg-list ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+/* Main service list styling */
+.five-list-service > ul {
+  list-style: decimal inside;
+  flex: 1 1 300px;
+  font-weight: 600;
+  color: #1a3e72;
+  padding-left: 20px;
+  margin: 0;
+}
+
+/* Nested sub-list for Food Hygiene */
+.foodhyg-list ul ul {
+  list-style-type: lower-alpha;
+  margin-left: 20px;
+  font-weight: normal;
+  color: #444;
+}
+
+/* Remove double bullet for nested ul inside li */
+.foodhyg-list > ul > li {
+  margin-bottom: 8px;
+}
+
+.service-explained {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.foodexplanation h3 {
+  color: #1a3e72;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.foodexplanation p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #444;
+}
+
+.foodexplanation h6 {
+  margin: 10px 0;
+  font-weight: 600;
+  color: #2e5a9f;
+}
+
+
+.otherandimage {
+  flex: 1 1 calc(50% - 20px);
+  display: flex;
+  align-items: flex-start; /* align top if image becomes tall */
+  gap: 20px;
+  box-sizing: border-box;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.otherandimage img {
+  width: 220px; /* Increased from 150px */
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.otherandimage div {
+  flex: 1;
+}
+
+
+
+/* Responsive adjustments */
+
+
+/* Headings */
+
+
+
+/* Clients Section */
+/* Clients Section */
+/* Clients Section */
+/* Clients Section */
+
+
+.clients {
+  background: #f4f7fa;
+  padding: 5rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.clients-box {
+  background: #fff;
+  border-radius: 20px;
+  padding: 3rem;
+  max-width: 1000px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.1);
+}
+
+.clients-box h3 {
+  font-size: 2.7rem;
+  color: #002b5c;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.clients-box .intro {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 3rem;
+}
+
+.client-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.client-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem 1.2rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  border: 2px solid transparent;
+  animation: floatCard 5s ease-in-out infinite, pulseGlow 6s ease-in-out infinite;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 1;
+}
+
+.client-card::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #a3d8f4, #1e3c72);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.client-card:hover::before {
+  opacity: 1;
+}
+
+.client-card:hover {
+  transform: scale(1.03);
+  color: #003366;
+  background: linear-gradient(135deg, #f9fcff, #eef4fa);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Animations */
+@keyframes floatCard {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0px rgba(30, 76, 150, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(30, 76, 150, 0.35);
+  }
+}
+
+/* Staggered delays */
+.client-card:nth-child(1) { animation-delay: 0s, 0s; }
+.client-card:nth-child(2) { animation-delay: 0.3s, 0.2s; }
+.client-card:nth-child(3) { animation-delay: 0.6s, 0.4s; }
+.client-card:nth-child(4) { animation-delay: 0.9s, 0.6s; }
+.client-card:nth-child(5) { animation-delay: 1.2s, 0.8s; }
+.client-card:nth-child(6) { animation-delay: 1.5s, 1s; }
+.client-card:nth-child(7) { animation-delay: 1.8s, 1.2s; }
+
+/* Responsive */
+@media (max-width: 600px) {
+  .clients-box {
+    padding: 2rem;
+  }
+  .clients-box h3 {
+    font-size: 2rem;
+  }
+  .clients-box .intro {
+    font-size: 1rem;
+  }
+}
+
+/* contact  */
+
+
+/* Contact form container */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.contacted {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 40px;
+  background: #5bd0e7;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.send {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+
+.contacted {
+  max-width: 700px;
+  margin: 60px auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.contacted:hover {
+  transform: translateY(-5px);
+}
+
+.send {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #1f2937;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#myform {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#myform input,
+#myform textarea {
+  padding: 15px 20px;
+  font-size: 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background-color: #f9fafb;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#myform input:focus,
+#myform textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
+  outline: none;
+}
+
+#myform textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+
+
+#myform button {
+  position: relative;
+  padding: 16px 32px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #111827;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  z-index: 1;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 15px rgba(37, 99, 235, 0.5);
+}
+
+/* Continuous animated glowing ring */
+#myform button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    #2563eb,
+    #00ffff,
+    #ff00ff,
+    #2563eb
+  );
+  animation: rotateGlow 5s linear infinite;
+  z-index: -2;
+  filter: blur(20px);
+  opacity: 0.7;
+}
+
+#myform button::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #111827;
+  border-radius: 12px;
+  z-index: -1;
+}
+
+/* On hover: boost glow + scale up */
+#myform button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.8),
+              0 0 40px rgba(255, 0, 255, 0.4);
+}
+
+@keyframes rotateGlow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
