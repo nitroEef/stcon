@@ -6,8 +6,9 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  color: #f9a66a;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 header {
@@ -18,7 +19,7 @@ header {
   color: white;
   position: relative;
   z-index: 100;
-  box-shadow: 0 1px 6px 1px #00b4d8;
+  box-shadow: 0 1px 3px 1px #00b4d8;
 ;
 }
 
@@ -76,7 +77,6 @@ header h1 {
 
 
 
-/* Show when active */
 .centerLink.active {
   display: block;
 }
@@ -89,24 +89,50 @@ h2, h3 {
 
 
 
-/* Hero Section */
-/* Hero Section */
 /* Hero Section */ 
 
-
 .introsection {
-  height: 100vh;
-  /* background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); */
-  background:url(./pictufe/doco\ 1.png);
-  background-position: center;
-  color: white;
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  height: 100vh; /* full screen */
+  overflow: hidden;
   justify-content: center;
   align-items: center;
+  display: flex;
   text-align: center;
-  padding: 2rem;
+
 }
+
+.bvideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width:100%;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  object-fit:contain;
+}
+
+.introsection .content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  padding-top: 30vh; /* adjust as needed */
+}
+@media screen and (max-width: 768px) {
+  .bvideo {
+    width: 100vw;
+    height: 100vh;
+    object-fit:none;
+  }
+
+  .introsection .content {
+    padding-top: 20vh; /* adjust for better vertical alignment */
+  }
+}
+
+
 
 .introsection p {
   font-size: 1.5rem;
@@ -295,6 +321,7 @@ h2, h3 {
   padding: 2rem 1rem;
 }
 
+
 @media (max-width: 768px) {
   .eef-explaining-the-4-images {
     grid-template-columns: 1fr; 
@@ -308,13 +335,27 @@ h2, h3 {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.4s ease;
+  cursor: pointer;
+  position: relative;
 }
 
+/* Hover with gradient and motion */
 .otherandimage:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #15d2e4, #1277e1);
 }
+
+/* Optional: inner image zoom effect */
+.otherandimage img {
+  transition: transform 0.4s ease;
+}
+
+.otherandimage:hover img {
+  transform: scale(1.05);
+}
+
 
 .otherandimage h2 {
   font-size: 1.25rem;
@@ -342,8 +383,6 @@ h2, h3 {
 
 
 /* Clients Section */
-
-
 
 
 .clients {
@@ -453,14 +492,11 @@ h2, h3 {
 /* contact  */
 
 
-/* Reset & base styles */
 
 
 
-/* Contact container */
 
 
-/* Contact section with cubic background */
 .contact {
   background: repeating-linear-gradient(
     45deg,
