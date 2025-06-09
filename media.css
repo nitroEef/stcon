@@ -1,6 +1,5 @@
 
 
-/* MOBILE FIRST: Adjust everything for smaller screens */
 @media (max-width: 900px) {
   .five-list-service {
     flex-direction: column;
@@ -14,6 +13,7 @@
     max-width: 100%;
   }
 }
+
 
 
 @media (max-width: 768px) {
@@ -90,10 +90,7 @@
     margin-left: 1.5rem;
   }
 
-/* ===== media.css ===== */
 
-/* Only apply on devices up to 768px wide */
-  /* Display the burger menu icon on phones */
   .icon {
     display: block;
     font-size: 2rem; /* Adjust for mobile readability */
@@ -103,14 +100,13 @@
     text-align: right;
   }
 
-  header{
+  /* header{
     display:flex;
     padding:1.1rem .4rem;
     justify-content: space-between;
     background-color: blueviolet;
-  }
+  } */
 
-  /* Stack and center the menu items */
   .centerLink {
     display: none; /* Hidden by default */
     flex-direction: column;

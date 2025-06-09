@@ -136,47 +136,68 @@ h2, h3 {
   justify-content: center;
   gap: 40px;
   padding: 40px 20px;
-  background: linear-gradient(135deg, #e0f7fa, #ffffff);
   animation: fadeIn 1s ease-in-out;
 } 
 
-.huty{
-  background-color: rgb(18, 17, 17);
-}
- .aboutintro {
+
+.aboutintro {
   flex: 1 1 300px;
   max-width: 350px;
   background: linear-gradient(160deg, #ffffff, #f1f8e9);
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: slideUp 0.8s ease forwards;
+  position: relative;
+  z-index: 0;
 }
 
-.aboutintro:nth-child(1) {
-  animation-delay: 0.2s;
-}
-.aboutintro:nth-child(2) {
-  animation-delay: 0.4s;
-}
-.aboutintro:nth-child(3) {
-  animation-delay: 0.6s;
+/* Registering custom angle property for animation */
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
 }
 
-.aboutintro:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0, 0,6, 0.15);
+.aboutintro::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding:4px;
+  border-radius: 12px;
+  background: conic-gradient(from var(--angle), rgb(38, 204, 237), rgb(8, 8, 8), rgb(127, 214, 229), cyan);
+  animation: spin 4s linear infinite;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#187b9c 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  z-index: -1;
+  box-sizing: border-box;
+}
+
+/* Animation definition */
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
 }
 
 
-/* Services Section */
-/* Services Section */
-/* Services Section */
-/* Reset and base styles */
 
-/* Section Styling */
-/* Container for the entire services section */
+
+/* services services  */
+
+
 .services {
   max-width: 1100px;
   margin: 40px auto;
@@ -267,60 +288,94 @@ h2, h3 {
   color: #2e5a9f;
 }
 
+.eef-explaining-the-4-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+
+@media (max-width: 768px) {
+  .eef-explaining-the-4-images {
+    grid-template-columns: 1fr; 
+  }
+} 
 
 .otherandimage {
-  flex: 1 1 calc(50% - 20px);
+  background: #15d2e4;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   display: flex;
-  align-items: flex-start; /* align top if image becomes tall */
-  gap: 20px;
-  box-sizing: border-box;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  background-color: #f9f9f9;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.otherandimage:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+}
+
+.otherandimage h2 {
+  font-size: 1.25rem;
+  margin: 1rem 1rem 0.5rem;
+  color: #2d3e50;
+}
+
+.otherandimage p {
+  font-size: 1rem;
+  margin: 0 1rem 1rem;
+  line-height: 1.6;
+  color: #444;
 }
 
 .otherandimage img {
-  width: 220px; /* Increased from 150px */
-  height: auto;
-  border-radius: 8px;
+  width: 100%;
+  height: 200px;
   object-fit: cover;
+  display: block;
+  border-top: 1px solid #eee;
+  margin-top: auto;
 }
 
-.otherandimage div {
-  flex: 1;
-}
-
-
-
-/* Responsive adjustments */
-
-
-/* Headings */
 
 
 
 /* Clients Section */
-/* Clients Section */
-/* Clients Section */
-/* Clients Section */
+
+
 
 
 .clients {
-  background: #f4f7fa;
+  position: relative;
   padding: 5rem 2rem;
   display: flex;
   justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 1;
+  min-height: 400px; /* Adjust as needed */
 }
-
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.3; /* adjust for readability */
+  pointer-events: none; /* allow clicks through the video */
+}
 .clients-box {
-  background: #fff;
+  background:transparent;
   border-radius: 20px;
   padding: 3rem;
   max-width: 1000px;
   width: 100%;
   text-align: center;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.1);
+    position: relative;
+  z-index: 2;
 }
 
 .clients-box h3 {
@@ -351,7 +406,6 @@ h2, h3 {
   font-weight: 500;
   color: #1a1a1a;
   border: 2px solid transparent;
-  animation: floatCard 5s ease-in-out infinite, pulseGlow 6s ease-in-out infinite;
   transition: all 0.3s ease;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   position: relative;
@@ -380,33 +434,8 @@ h2, h3 {
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 }
 
-/* Animations */
-@keyframes floatCard {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
 
-@keyframes pulseGlow {
-  0%, 100% {
-    box-shadow: 0 0 0px rgba(30, 76, 150, 0.15);
-  }
-  50% {
-    box-shadow: 0 0 20px rgba(30, 76, 150, 0.35);
-  }
-}
 
-/* Staggered delays */
-.client-card:nth-child(1) { animation-delay: 0s, 0s; }
-.client-card:nth-child(2) { animation-delay: 0.3s, 0.2s; }
-.client-card:nth-child(3) { animation-delay: 0.6s, 0.4s; }
-.client-card:nth-child(4) { animation-delay: 0.9s, 0.6s; }
-.client-card:nth-child(5) { animation-delay: 1.2s, 0.8s; }
-.client-card:nth-child(6) { animation-delay: 1.5s, 1s; }
-.client-card:nth-child(7) { animation-delay: 1.8s, 1.2s; }
 
 /* Responsive */
 @media (max-width: 600px) {
@@ -424,148 +453,106 @@ h2, h3 {
 /* contact  */
 
 
-/* Contact form container */
-.contact-form {
-  max-width: 600px;
-  margin: 0 auto;
-  background-color: #ffffff;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-/* Heading */
-.contacted {
-  max-width: 500px;
-  margin: 50px auto;
-  padding: 40px;
-  background: #5bd0e7;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-.send {
-  font-size: 28px;
-  margin-bottom: 20px;
-  text-align: center;
-  color: #333;
-}
+/* Reset & base styles */
 
 
-.contacted {
-  max-width: 700px;
-  margin: 60px auto;
-  background: #ffffff;
+
+/* Contact container */
+
+
+/* Contact section with cubic background */
+.contact {
+  background: repeating-linear-gradient(
+    45deg,
+    #f6f5f5,
+  );
   padding: 40px;
   border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  max-width: 600px;
+  margin: 40px auto;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: none;
 }
 
-.contacted:hover {
-  transform: translateY(-5px);
-}
-
-.send {
+/* Heading style */
+.contact h2 {
   text-align: center;
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 2.2rem;
+  color: #00ffff;
   margin-bottom: 30px;
-  color: #1f2937;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
 }
 
-#myform {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+/* Input group wrapper */
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
 }
 
-#myform input,
-#myform textarea {
-  padding: 15px 20px;
-  font-size: 16px;
-  border: 1px solid #d1d5db;
-  border-radius: 10px;
-  background-color: #f9fafb;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-#myform input:focus,
-#myform textarea:focus {
-  border-color: #2563eb;
-  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
+/* Input and textarea styling */
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 2px solid #0ff;
+  border-left: 2px solid #0ff;
+  border-right: 2px solid #0ff;
+  border-top: none;
+  border-radius: 10px 10px 0 0;
+  color: #70c6f4;
+  transition: all 0.4s ease;
   outline: none;
 }
 
-#myform textarea {
-  resize: vertical;
-  min-height: 120px;
+/* On focus - glow effect */
+.input-group input:focus,
+.input-group textarea:focus {
+  box-shadow: 0 0 12px #00ffff99;
 }
 
+/* Floating label style */
+.input-group label {
+  position: absolute;
+  left: 14px;
+  top: 12px;
+  color: #aaa;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: 0.3s ease all;
+}
 
+/* Float label up */
+.input-group input:focus + label,
+.input-group input:valid + label,
+.input-group textarea:focus + label,
+.input-group textarea:valid + label {
+  top: -12px;
+  left: 10px;
+  font-size: 0.8rem;
+  color: #48f8f8;
+  padding: 0 5px;
+}
 
-#myform button {
-  position: relative;
-  padding: 16px 32px;
-  font-size: 18px;
-  font-weight: 600;
-  color: #fff;
-  background-color: #111827;
+/* Send button */
+.btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  background: linear-gradient(90deg, #00ffff, #0099ff);
   border: none;
-  border-radius: 12px;
+  color: #000;
+  border-radius: 8px;
   cursor: pointer;
-  z-index: 1;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-  box-shadow: 0 0 15px rgba(37, 99, 235, 0.5);
+  transition: all 0.3s ease;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
-/* Continuous animated glowing ring */
-#myform button::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: conic-gradient(
-    from 0deg,
-    #2563eb,
-    #00ffff,
-    #ff00ff,
-    #2563eb
-  );
-  animation: rotateGlow 5s linear infinite;
-  z-index: -2;
-  filter: blur(20px);
-  opacity: 0.7;
+.btn:hover {
+  background: linear-gradient(90deg, #0099ff, #00ffff);
+  box-shadow: 0 0 15px #00ffff88;
+  transform: scale(1.02);
 }
-
-#myform button::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: #111827;
-  border-radius: 12px;
-  z-index: -1;
-}
-
-/* On hover: boost glow + scale up */
-#myform button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(0, 255, 255, 0.8),
-              0 0 40px rgba(255, 0, 255, 0.4);
-}
-
-@keyframes rotateGlow {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-

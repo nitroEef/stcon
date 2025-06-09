@@ -7,6 +7,7 @@
     <title>Sci-Tech Consult</title> 
      <link rel="stylesheet" href="style.css">
      <link rel="stylesheet" href="media.css">
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
      <script src="https://kit.fontawesome.com/d8a91c391b.js" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -30,7 +31,7 @@
   //   });
   // });
 
-
+// kefpmfmmfmdmsdmdmd
 
 </script>
 
@@ -38,14 +39,13 @@
 
 
 <body>
-  <header>
+  <header data-aos="zoom-in">
     <p> Sci-Tech Consult</p>
       <div class="centerLink">  
            <ul>
-            <li> <a href="">About </a>  </li>
-            <li> <a href="">Services </a></li>
-            <li> <a href="">Our Clients </a></li>
-            <li> <a href="">Contact</a>  </li>
+            <li> <a href="#services">Services </a></li>
+            <li> <a href="#clients">Our Clients </a></li>
+            <li> <a href="#contact">Contact</a>  </li>
            </ul>
       </div>
 
@@ -58,7 +58,7 @@
 
 
   <!-- introsection  second design -->
-  <div class="introsection">
+  <div class="introsection" data-aos="zoom-in">
     <P> SCI-TECH CONSULT</P>
     <p> Your laboratory solutions for Food and Drink quality assurance</p>
    <a href="/#contacted"><button> send a message</button> </a>
@@ -67,7 +67,7 @@
 
 
 
-<div class="about">
+<div class="about" data-aos="zoom-in" id="about">
         <div class="aboutintro huty">
           <h3>INTRODUCTION </h3>
           <p>Established in 2016, Sci-Tech Consult set out itself to be a leading consulting firm for food
@@ -95,7 +95,7 @@
 
 <!-- section for services  -->
 
-<section class="services">
+<section class="services" data-aos="zoom-in" id="services">
   <h3>Our Services</h3>
   <p>We specialize in a wide range of consultancy and analytical services:</p>
 
@@ -156,7 +156,7 @@
     </div>
 
     <!-- Water Quality -->
-     <div class="eef-explaining-the-4-images">
+     <div class="eef-explaining-the-4-images" data-aos="zoom-in">
     <div class="otherandimage">
       <div>
         <h2>Water Quality Analysis and Control</h2>
@@ -207,23 +207,27 @@
 </section>
 
 
-<section class="clients">
+<section class="clients" id="client" >
+   <video autoplay muted loop playsinline class="bg-video">
+    <source src="uu.mp4" type="video/mp4" />
+  </video>
   <div class="clients-box">
     <h3>Our Clients</h3>
     <p class="intro">We are proud to work with industry leaders across hospitality and services:</p>
-    <div class="client-grid">
-      <div class="client-card">Festival Hotel, Festac, Lagos State</div>
-      <div class="client-card">The Sidney Restaurant, Ilorin, Kwara State</div>
-      <div class="client-card">Dante Restaurant and Lounge, Ilorin, Kwara State</div>
-      <div class="client-card">Olanze Fresh ‘N’ Quick, Ilorin, Kwara State</div>
-      <div class="client-card">Yaren Nigeria Limited (Yaren Water), Ilorin, Kwara State</div>
-      <div class="client-card">Gidi Burger Restaurant, Surulere, Lagos State</div>
-      <div class="client-card">The Hotel Mac, Aguda, Surulere, Lagos</div>
+    <div class="client-grid" data-aos='zoom-in'>
+      <div class="client-card" data-aos="zoom-in" >Festival Hotel, Festac, Lagos State</div>
+      <div class="client-card" data-aos="zoom-in">The Sidney Restaurant, Ilorin, Kwara State</div>
+      <div class="client-card" data-aos="zoom-in">Dante Restaurant and Lounge, Ilorin, Kwara State</div>
+      <div class="client-card" data-aos="zoom-in">Olanze Fresh ‘N’ Quick, Ilorin, Kwara State</div>
+      <div class="client-card" data-aos="zoom-in">Yaren Nigeria Limited (Yaren Water), Ilorin, Kwara State</div>
+      <div class="client-card" data-aos="zoom-in">Gidi Burger Restaurant, Surulere, Lagos State</div>
+      <div class="client-card" data-aos="zoom-in">The Hotel Mac, Aguda, Surulere, Lagos</div>
     </div>
   </div>
 </section>
 
-<div class="container">
+
+<!-- <div class="contact">
   <h2> Contact us</h2>
   <form>
 
@@ -240,9 +244,45 @@
     <textarea id="message" name="message"  required></textarea>
     <button type="button" class="btn" onclick="sendEmail()"> Send</button>
   </form>
+</div> -->
+
+
+<div class="contact"  data-aos="zoom-in" id="contact">
+  <h2>Contact Us</h2>
+  <form>
+    <div class="input-group">
+      <input type="text" name="name" id="name" required />
+      <label for="name">Name</label>
+    </div>
+
+    <div class="input-group">
+      <input type="email" name="email" id="email" required />
+      <label for="email">Email</label>
+    </div>
+
+    <div class="input-group">
+      <input type="text" name="subject" id="subject" required />
+      <label for="subject">Subject</label>
+    </div>
+
+    <div class="input-group">
+      <textarea name="message" id="message" required></textarea>
+      <label for="message">Message</label>
+    </div>
+
+    <button type="button" class="btn" onclick="sendEmail()">Send</button>
+  </form>
 </div>
 
 <script type="text/javascript" src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1500,// animation duration in ms
+    once: false,// animation happens only once on scroll
+    easing:"ease-out"
+  });
+</script>
 
 </body>
 </html>
