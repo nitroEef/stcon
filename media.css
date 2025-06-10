@@ -1,157 +1,351 @@
-
-
-@media (max-width: 900px) {
-  .five-list-service {
-    flex-direction: column;
-  }
-  
-  .five-list-service > ul {
-    padding-left: 0;
-  }
-
-  .otherandimage img {
-    max-width: 100%;
-  }
-
-}
-
-
-
-@media (max-width: 768px) {
-  header {
+/* ========= Extra Small Devices (Phones) ========= */
+@media (max-width: 456px) {
+   header {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-  }
-
-  header p {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-
-  .icon {
-    cursor: pointer;
-    margin-bottom: 1rem;
-  }
-
-  .about {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
     gap: 1rem;
   }
 
-  .five-list-service {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .foodhyg-list, .five-list-service > li {
-    flex: 1 1 100%;
-    text-align: center;
-  }
-
-  .otherandimage {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1rem;
-  }
-
-  .otherandimage img {
+  .header-left {
+    display: flex;
     width: 100%;
-    max-width: 300px; /* optional max size */
+    justify-content: space-between;
+    align-items: center;
+  }
+  .icon {
+    display: block;
+    font-size: 2.2rem;
   }
 
-  .introsection p {
-    font-size: 1.2rem;
-    text-align: center;
-  }
-
-  .introsection button {
-    font-size: 0.9rem;
-    padding: 0.6rem 1.2rem;
+  .centerLink {
+    display: none;
+    width: 100%;
     margin-top: 1rem;
   }
 
-
-  .about {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  /* .about > div {
-    flex: 1;
-    margin: 0 1rem;
-  } */
-
-  .services li {
-    margin-left: 1.5rem;
-  }
-
-
-  .icon {
-    display: block;
-    font-size: 2rem; /* Adjust for mobile readability */
-    color: red;
-    cursor: pointer;
-    margin-top: 0.5rem;
-    text-align: right;
-  }
-
-  /* header{
-    display:flex;
-    padding:1.1rem .4rem;
-    justify-content: space-between;
-    background-color: blueviolet;
-  } */
-
-  .centerLink {
-    display: none; /* Hidden by default */
-    flex-direction: column;
-    align-items: center;
-    background-color: #488bb8;
-    padding: 1rem 0;
-    width: 100%;
-    position: absolute;
-    top: 100%; /* right below the header */
-    left: 0;
-    z-index: 1000;
-  }
-
   .centerLink.active {
-    display: flex; /* Show when active */
+    display: block;
   }
 
   .centerLink ul {
     flex-direction: column;
     gap: 1rem;
+    justify-content: center;
+    align-items: center;
   }
 
-  .centerLink a {
-    color: #fff;
+
+  .introsection {
+    height: 77vh; 
+    padding: 1rem;
+    
+  }
+
+
+
+  .introsection p {
     font-size: 1rem;
   }
 
-  .centerLink a:hover {
-    color: #f0f0f0;
+  .introsection button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
   }
 
-  .centerLink a::after {
-    background-color: #f0f0f0;
+  .bvideo {
+    width: 155%;
+    object-fit: fill;
+    height: 100%;
+
+  }
+
+
+  .five-list-service {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .eef-explaining-the-4-images {
+    grid-template-columns: 1fr;
+  }
+
+.service-explained {
+/* position: relative;
+bottom:9rem; */
+margin-top: -11rem;
+}
+
+.foodexplanation h3{
+  font-size: 22px;
+}
+  .clients-box {
+    padding: 1rem;
+  }
+
+  .clients-box h3 {
+    font-size: 1.7rem;
+    letter-spacing: 0.5px;
+  }
+
+  .clients-box .intro {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+
+  .client-grid {
+    grid-template-columns: 1fr; /* Force single column */
+    gap: 1.2rem;
+  }
+
+  .client-card {
+    padding: 0.9rem;
+    font-size: 0.9rem;
+  }
+
+
+
+  .contact {
+    padding: 20px;
+  }
+
+  .contact h2 {
+    font-size: 1.5rem;
   }
 }
 
-@media (max-width: 480px) {
+
+/* ========= Small Devices (Large Phones & Small Tablets) ========= */
+@media (min-width: 457px) and (max-width: 677px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-left {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .icon {
+    display: block;
+    font-size: 2.5rem;
+  }
+
+  .centerLink {
+    display: none;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .centerLink.active {
+    display: block;
+  }
+
+   .centerLink ul {
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .introsection {
+    height: 75vh;           /* Slightly reduced height */
+    padding: 1.2rem 1.5rem; /* Moderate padding */
+  }
+
+  .introsection .content {
+    padding-top: 22vh;      /* Less top padding for smaller screens */
+  }
+
   .introsection p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;      /* Slightly smaller font */
   }
 
   .introsection button {
-    font-size: 0.85rem;
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1.2rem; /* Smaller button padding */
+    font-size: 0.95rem;
   }
+
+
   
+  .bvideo {
+    width: 175%;
+    object-fit: fill;
+    height: 100%;
+
+  }
+
+
+
+  .five-list-service {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .eef-explaining-the-4-images {
+    grid-template-columns: 1fr;
+  }
+
+  
+.service-explained {
+/* position: relative;
+bottom:9rem; */
+margin-top: -11rem;
+}
+
+  .clients-box {
+    padding: 1.5rem 2rem;
+  }
+
+  .clients-box h3 {
+    font-size: 2rem;
+    letter-spacing: 0.7px;
+  }
+
+  .clients-box .intro {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .client-grid {
+    grid-template-columns: 1fr; 
+    gap: 1.5rem;
+  }
+
+  .client-card {
+    padding: 1rem 1.1rem;
+    font-size: 0.98rem;
+  }
+
+
+
+  .contact h2 {
+    font-size: 1.8rem;
+  }
+}
+
+
+/* ========= Medium Devices (Tablets) ========= */
+@media (min-width: 678px) and (max-width: 856px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .centerLink {
+    display: block;
+  }
+
+  .centerLink ul {
+    flex-direction: row;
+    gap: 1.2rem;
+  }
+
+  .introsection {
+    height: 85vh;           /* Slightly taller than smaller screens */
+    padding: 1.5rem 2rem;   /* Comfortable padding */
+  }
+
+  .introsection .content {
+    padding-top: 25vh;      /* Moderate top padding */
+  }
+
+  .introsection p {
+    font-size: 1.35rem;     /* Medium font size */
+  }
+
+  .introsection button {
+    padding: 0.7rem 1.4rem; /* Medium button padding */
+    font-size: 1rem;
+  }
+
+  .bvideo {
+    width: 115%;            /* Slightly larger video */
+    object-fit: fill;
+    height: 100%;
+  }
+
+
+  .five-list-service {
+    flex-direction: row;
+    gap: 60px;
+  }
+
+  .eef-explaining-the-4-images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .client-card {
+    font-size: 1.05rem;
+  }
+
+  .contact h2 {
+    font-size: 2rem;
+  
+}
+
+}
+/* ========= Large Tablets / Small Laptops ========= */
+@media (min-width: 857px) and (max-width: 1000px) {
+  header {
+    justify-content: space-between;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .centerLink {
+    display: block;
+  }
+
+  .centerLink ul {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+@media (min-width: 857px) and (max-width: 1000px) {
+  .introsection {
+    height: 90vh;           /* Closer to full screen */
+    padding: 1.7rem 2.5rem; /* Slightly more padding */
+  }
+
+  .introsection .content {
+    padding-top: 27vh;      
+
+  .introsection p {
+    font-size: 1.45rem;     /* Slightly larger text */
+  }
+
+  .introsection button {
+    padding: 0.75rem 1.5rem; /* Default button padding */
+    font-size: 1.05rem;
+  }
+
+  .bvideo {
+    width: 110%;            /* Just a bit wider */
+    object-fit: cover;
+  }
+}
+
+  .five-list-service {
+    gap: 80px;
+  }
+
+  .eef-explaining-the-4-images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .client-card {
+    font-size: 1.1rem;
+  }
+
+  .contact h2 {
+    font-size: 2.2rem;
+  }
+}
 }
