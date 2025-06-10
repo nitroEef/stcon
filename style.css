@@ -61,7 +61,9 @@ header p{
 }
 
 .centerLink a:hover {
-  color: #ffe;
+  color: #54eaf5;
+  font-weight: 900;
+
   transform: translateY(-2px);
 }
 
@@ -119,7 +121,9 @@ h2, h3 {
 .introsection .introcontent {
   position: relative;
   z-index: 1;
-  color: #6edada;
+       color:rgb(83, 221, 249);
+
+
   font-weight: 700;
 
   text-align: center;
@@ -345,8 +349,8 @@ h2, h3 {
 /* Hover with gradient and motion */
 .otherandimage:hover {
   transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(135deg, #15d2e4, #1a1f24);
+  background: linear-gradient(135deg,rgb(246, 243, 243), #f6fbfc, #050505);
+
 }
 
 /* Optional: inner image zoom effect */
@@ -417,13 +421,16 @@ h2, h3 {
   text-align: center;
     position: relative;
   z-index: 2;
+  margin-top: -5rem;
 }
 
 .clients-box h3 {
-  font-size: 2.7rem;
-    color:rgb(58, 232, 241);
-  
-  margin-bottom: 1rem;
+ 
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #1a3e72;
+
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -443,8 +450,8 @@ h2, h3 {
 .client-card {
   background: #ffffff;
   border-radius: 16px;
-  padding: 1.5rem 1.2rem;
-  font-size: 1.05rem;
+  padding: 1.4rem 1.1rem;
+  font-size: 1.01rem;
   font-weight: 500;
   color: #1a1a1a;
   border: 2px solid transparent;
@@ -458,8 +465,9 @@ h2, h3 {
   content: '';
   position: absolute;
   inset: -2px;
+  color:rgb(142, 7, 7);
   border-radius: 18px;
-  background: linear-gradient(135deg, #a3d8f4, #1e3c72);
+  background-image: linear-gradient(135deg, #69f5f5,black, #f2f4f8);
   z-index: -1;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -471,7 +479,7 @@ h2, h3 {
 
 .client-card:hover {
   transform: scale(1.03);
-  color:rgb(58, 232, 241);
+  color:whitesmoke;
   border-color: #00ffff;
   cursor: pointer;
   background: linear-gradient(135deg, #f9fcff, #eef4fa);
@@ -577,12 +585,17 @@ h2, h3 {
 }
 
 
-.footer {
-  background-image: url(./pictufe/tutue.avif);
-  color: #333;
+.lab-footer {
+  background-image:url(./oooo.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
   padding: 50px 20px 30px;
   font-family: 'Arial', sans-serif;
   border-top: 1px solid #ddd;
+  color: #54eaf5;
+
 }
 
 .footer-container {
@@ -591,24 +604,34 @@ h2, h3 {
   justify-content: space-between;
   max-width: 1200px;
   margin: auto;
-  gap: 40px;
+  color: #54eaf5;
+  
+  gap: 70px;
 }
 
 .footer-column {
   flex: 1;
   min-width: 240px;
+  color: #54eaf5;
+
+}
+.footer-column ul{
+  color: #54eaf5;
+
 }
 
 .footer-column h3 {
   font-size: 18px;
   margin-bottom: 15px;
-  color: #222;
+  color: #54eaf5;
 }
 
 .footer-column p {
   margin: 5px 0;
   line-height: 1.6;
-  color: #555;
+  
+   color: whitesmoke;
+
 }
 
 .footer-column ul {
@@ -622,8 +645,9 @@ h2, h3 {
 }
 
 .footer-column ul li a {
-  color: #333;
-  text-decoration: none;
+   color: whitesmoke;
+   
+  text-decoration:dashed;
   transition: color 0.3s ease;
 }
 
@@ -636,5 +660,14 @@ h2, h3 {
   text-align: center;
   margin-top: 40px;
   font-size: 14px;
-  color: #888;
+
+  color: #54eaf5;
+
+
+  font-weight:900;
+  
 }
+
+
+span{
+color:rgb(250, 212, 0);}
