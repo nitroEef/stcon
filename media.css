@@ -1,4 +1,3 @@
-/* ========= Extra Small Devices (Phones) ========= */
 @media (max-width: 456px) {
    header {
     display: flex;
@@ -80,6 +79,7 @@ margin-top: -11rem;
 }
   .clients-box {
     padding: 1rem;
+    margin-top: -5rem;
   }
 
   .clients-box h3 {
@@ -93,7 +93,7 @@ margin-top: -11rem;
   }
 
   .client-grid {
-    grid-template-columns: 1fr; /* Force single column */
+    grid-template-columns: 1fr; 
     gap: 1.2rem;
   }
 
@@ -114,7 +114,6 @@ margin-top: -11rem;
 }
 
 
-/* ========= Small Devices (Large Phones & Small Tablets) ========= */
 @media (min-width: 457px) and (max-width: 677px) {
   header {
     flex-direction: column;
@@ -149,20 +148,20 @@ margin-top: -11rem;
   }
 
   .introsection {
-    height: 75vh;           /* Slightly reduced height */
-    padding: 1.2rem 1.5rem; /* Moderate padding */
+    height: 75vh;          
+    padding: 1.2rem 1.5rem;
   }
 
   .introsection .content {
-    padding-top: 22vh;      /* Less top padding for smaller screens */
+    padding-top: 22vh;     
   }
 
   .introsection p {
-    font-size: 1.2rem;      /* Slightly smaller font */
+    font-size: 1.2rem;     
   }
 
   .introsection button {
-    padding: 0.6rem 1.2rem; /* Smaller button padding */
+    padding: 0.6rem 1.2rem; 
     font-size: 0.95rem;
   }
 
@@ -225,7 +224,6 @@ margin-top: -11rem;
 }
 
 
-/* ========= Medium Devices (Tablets) ========= */
 @media (min-width: 678px) and (max-width: 856px) {
   header {
     flex-direction: row;
@@ -246,25 +244,25 @@ margin-top: -11rem;
   }
 
   .introsection {
-    height: 85vh;           /* Slightly taller than smaller screens */
-    padding: 1.5rem 2rem;   /* Comfortable padding */
+    height: 85vh;          
+    padding: 1.5rem 2rem;  
   }
 
   .introsection .content {
-    padding-top: 25vh;      /* Moderate top padding */
+    padding-top: 25vh;     
   }
 
   .introsection p {
-    font-size: 1.35rem;     /* Medium font size */
+    font-size: 1.35rem;     
   }
 
   .introsection button {
-    padding: 0.7rem 1.4rem; /* Medium button padding */
+    padding: 0.7rem 1.4rem; 
     font-size: 1rem;
   }
 
   .bvideo {
-    width: 115%;            /* Slightly larger video */
+    width: 115%;           
     object-fit: fill;
     height: 100%;
   }
@@ -289,7 +287,6 @@ margin-top: -11rem;
 }
 
 }
-/* ========= Large Tablets / Small Laptops ========= */
 @media (min-width: 857px) and (max-width: 1000px) {
   header {
     justify-content: space-between;
@@ -310,24 +307,24 @@ margin-top: -11rem;
 
 @media (min-width: 857px) and (max-width: 1000px) {
   .introsection {
-    height: 90vh;           /* Closer to full screen */
-    padding: 1.7rem 2.5rem; /* Slightly more padding */
+    height: 90vh;           
+    padding: 1.7rem 2.5rem; 
   }
 
   .introsection .content {
     padding-top: 27vh;      
 
   .introsection p {
-    font-size: 1.45rem;     /* Slightly larger text */
+    font-size: 1.45rem;     
   }
 
   .introsection button {
-    padding: 0.75rem 1.5rem; /* Default button padding */
+    padding: 0.75rem 1.5rem; 
     font-size: 1.05rem;
   }
 
   .bvideo {
-    width: 110%;            /* Just a bit wider */
+    width: 110%;            
     object-fit: cover;
   }
 }
