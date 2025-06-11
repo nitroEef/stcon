@@ -104,6 +104,8 @@ h2, h3 {
   align-items: center;
   display: flex;
   text-align: center;
+  background-color: red;
+  z-index: 2;
 
 }
 
@@ -121,7 +123,7 @@ h2, h3 {
 .introsection .introcontent {
   position: relative;
   z-index: 1;
-       color:rgb(83, 221, 249);
+       color: #000000;
 
 
   font-weight: 700;
@@ -137,11 +139,23 @@ h2, h3 {
   text-align: center;
   font-size: clamp(1rem, 2.5vw, 1.25rem);
   line-height: 1.6;
-  color: white;
+  color:  #0d1819;
   font-weight: 500;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.sci {
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+
+  background: linear-gradient(170deg, #080808,black,rgb(70, 74, 70), #4506f35d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* color: transparent; */
+
+  text-align: center;
+  margin: 1rem 0;
+}
 
 
 
@@ -154,7 +168,7 @@ h2, h3 {
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
-  background-color: #00b4d8;
+  background: linear-gradient(115deg, #000000, #51c7ee);
   color: white;
   border: none;
   border-radius: 5px;
@@ -163,8 +177,9 @@ h2, h3 {
 }
 
 .introsection button:hover {
-  background-color: #0077b6;
+  background: linear-gradient(175deg, #1a1a1a, #73d2f5);
 }
+
 
 
 .about {
