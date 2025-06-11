@@ -94,11 +94,10 @@ h2, h3 {
   gap: 1rem;
 }
 
-/* Hero Section */ 
 
 .introsection {
   position: relative;
-  height: 100vh; /* full screen */
+  height: 100vh;
   overflow: hidden;
   justify-content: center;
   align-items: center;
@@ -151,7 +150,6 @@ h2, h3 {
   background: linear-gradient(170deg, #080808,black,rgb(70, 74, 70), #4506f35d);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  /* color: transparent; */
 
   text-align: center;
   margin: 1rem 0;
