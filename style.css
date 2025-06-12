@@ -103,7 +103,6 @@ h2, h3 {
   align-items: center;
   display: flex;
   text-align: center;
-  background-color: red;
   z-index: 2;
 
 }
@@ -118,17 +117,18 @@ h2, h3 {
   transform: translate(-50%, -50%);
   object-fit:contain;
 }
-
-.introsection .introcontent {
+/* 
+.introsection.introcontent {
   position: relative;
   z-index: 1;
-       color: #000000;
 
+
+  color:#00ffff;
 
   font-weight: 700;
 
   text-align: center;
-}
+} */
 
 
 .intro-text {
@@ -147,20 +147,18 @@ h2, h3 {
   font-weight: 900;
   letter-spacing: 0.2rem;
 
-  background: linear-gradient(170deg, #080808,black,rgb(70, 74, 70), #4506f35d);
+  background: linear-gradient(170deg, #080808,black,rgb(22, 102, 100), #4506f35d);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
   text-align: center;
   margin: 1rem 0;
 }
 
 
-
 .introsection p {
   font-size: 1.5rem;
   margin: 0.5rem 0;
-}
+} 
 
 .introsection button {
   margin-top: 1rem;
