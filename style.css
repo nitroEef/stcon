@@ -116,6 +116,7 @@ h2, h3 {
   z-index: -1;
   transform: translate(-50%, -50%);
   object-fit:contain;
+  background-color: red;
 }
 /* 
 .introsection.introcontent {
@@ -214,16 +215,16 @@ h2, h3 {
   bottom: 0;
   padding:4px;
   border-radius: 12px;
-  background: conic-gradient(from var(--angle), rgb(38, 204, 237), rgb(8, 8, 8), rgb(127, 214, 229), cyan);
+  background: conic-gradient(from var(--angle), rgb(23, 23, 23),rgb(8, 8, 8),rgb(8, 8, 8), rgb(9, 9, 9), rgb(70, 233, 245));
   animation: spin 4s linear infinite;
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#187b9c 0 0);
+    linear-gradient(#13d2e7 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   mask:
     linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
+    linear-gradient(#1f1d1d 0 0);
   mask-composite: exclude;
   z-index: -1;
   box-sizing: border-box;
@@ -339,7 +340,7 @@ h2, h3 {
 
 .eef-explaining-the-4-images {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+  grid-template-columns: repeat(2, 1fr); 
   gap: 2rem;
   padding: 2rem 1rem;
 }
@@ -597,8 +598,8 @@ h2, h3 {
 
 
 .lab-footer {
-  background-image:url(./oooo.webp);
-  background-position: center;
+    background-image:url(./oooo.webp);
+background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   
@@ -611,6 +612,7 @@ h2, h3 {
 
 .footer-container {
   display: flex;
+
   flex-wrap: wrap;
   justify-content: space-between;
   max-width: 1200px;
@@ -671,9 +673,8 @@ h2, h3 {
   text-align: center;
   margin-top: 40px;
   font-size: 14px;
-
-  color: #54eaf5;
-
+ 
+color:rgb(241, 213, 0);
 
   font-weight:900;
   
@@ -681,4 +682,4 @@ h2, h3 {
 
 
 span{
-color:rgb(250, 212, 0);}
+color:rgb(241, 213, 0);}
