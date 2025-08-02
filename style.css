@@ -116,7 +116,7 @@ h2, h3 {
   z-index: -1;
   transform: translate(-50%, -50%);
   object-fit:contain;
-  background-color: red;
+  background-color: rgb(12, 12, 12);
 }
 /* 
 .introsection.introcontent {
@@ -139,8 +139,10 @@ h2, h3 {
   text-align: center;
   font-size: clamp(1rem, 2.5vw, 1.25rem);
   line-height: 1.6;
-  color:  #0d1819;
-  font-weight: 500;
+    background: linear-gradient(to right, rgb(255, 255, 255) 70%, #1d2729 45%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
 }
 
 .sci {
@@ -422,8 +424,8 @@ h2, h3 {
   height: 100%;
   object-fit: cover;
   z-index: 0;
-  opacity: 0.3; /* adjust for readability */
-  pointer-events: none; /* allow clicks through the video */
+  opacity: 0.3; 
+  pointer-events: none; 
 }
 .clients-box {
   border-radius: 20px;
