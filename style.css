@@ -139,9 +139,8 @@ h2, h3 {
   text-align: center;
   font-size: clamp(1rem, 2.5vw, 1.25rem);
   line-height: 1.6;
-    background: linear-gradient(to right, rgb(255, 255, 255) 70%, #1d2729 55%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: rgb(244, 244, 248);
+  
   font-weight: 600;
 }
 
@@ -149,10 +148,8 @@ h2, h3 {
   font-size: 35px;
   font-weight: 900;
   letter-spacing: 0.2rem;
+color: whitesmoke;
 
-  background: linear-gradient(170deg, #080808,black,rgb(22, 102, 100), #4506f35d);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   text-align: center;
   margin: 1rem 0;
 }
@@ -600,10 +597,9 @@ h2, h3 {
 
 
 .lab-footer {
-    background-image:url(./oooo.webp);
-background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+
+    background: linear-gradient(90deg, #0099ff, #00ffff);
+
   
   padding: 50px 20px 30px;
   font-family: 'Arial', sans-serif;
