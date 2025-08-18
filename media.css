@@ -5,6 +5,14 @@
     gap: 1rem;
   }
 
+
+  .introsection button {
+    width: 70%;            /* takes full width */
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+    border-radius: 40px;
+  }
+
   .header-left {
     display: flex;
     width: 100%;
@@ -40,16 +48,25 @@
     
   }
 
+  .introcontent {
+    padding: 1.5rem .5rem;
+  }
+  .sci {
+    font-size: 1.7rem;
+    letter-spacing: 1.5px;
+  }
+  .intro-text {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+}
 
 
-  .introsection p {
+  /* .introsection p {
     font-size: 1rem;
-  }
+  } */
 
-  .introsection button {
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-  }
+  
 
   .bvideo {
     width: 155%;
@@ -116,6 +133,10 @@ margin-top: -11rem;
     text-align: center;
 }
 }
+
+
+
+
 
 
 @media (min-width: 457px) and (max-width: 677px) {

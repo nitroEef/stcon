@@ -8,7 +8,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
   background: #84dbf324;
 }
@@ -105,7 +105,35 @@ h2, h3 {
   text-align: center;
   z-index: 2;
 
+
 }
+
+
+ 
+.introcontent {
+  text-align: center;
+  padding: 3rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.sci {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: whitesmoke;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  line-height: 1.7;
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+
 
 .bvideo {
   position: absolute;
@@ -116,66 +144,55 @@ h2, h3 {
   z-index: -1;
   transform: translate(-50%, -50%);
   object-fit:contain;
-  background-color: rgb(12, 12, 12);
-}
-/* 
-.introsection.introcontent {
-  position: relative;
-  z-index: 1;
 
-
-  color:#00ffff;
-
-  font-weight: 700;
-
-  text-align: center;
-} */
-
-
-.intro-text {
-  max-width: 800px;
-  width: 90%;
-  margin: 0 auto 2rem auto; 
-  text-align: center;
-  font-size: clamp(1rem, 2.5vw, 1.25rem);
-  line-height: 1.6;
-  color: rgb(244, 244, 248);
-  
-  font-weight: 600;
+  /* darken toward black */
+  filter: brightness(20%) contrast(90%);
 }
 
-.sci {
-  font-size: 35px;
-  font-weight: 900;
-  letter-spacing: 0.2rem;
-color: whitesmoke;
-
-  text-align: center;
-  margin: 1rem 0;
-}
-
-
-.introsection p {
-  font-size: 1.5rem;
-  margin: 0.5rem 0;
-} 
 
 .introsection button {
   margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
+  padding: 0.9rem 2.2rem;
   font-size: 1rem;
-  background: linear-gradient(115deg, #000000, #51c7ee);
-  color: white;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(120deg, #000000 0%, #51c7ee 100%);
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  letter-spacing: 0.5px;
+  box-shadow: 0 8px 18px rgba(17, 205, 195, 0.35);
+  transition: all 0.4s ease;
 }
 
+.introsection button::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(238, 5, 5, 0.4) 0%, transparent 60%);
+  transform: rotate(45deg);
+  transition: opacity .4s ease, transform .6s ease;
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* hover effect */
 .introsection button:hover {
-  background: linear-gradient(175deg, #1a1a1a, #73d2f5);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 22px rgba(244, 241, 241, 0.45);
 }
 
+.introsection button:hover::before {
+  opacity: 1;
+  transform: rotate(45deg) translate(30%,30%);
+}
 
 
 .about {
@@ -521,7 +538,6 @@ color: whitesmoke;
 .contact h2 {
   text-align: center;
   font-size: 2.2rem;
-    color:rgb(58, 232, 241);
 
   margin-bottom: 30px;
   text-shadow:  8px rgba(71, 159, 159, 0.5);
@@ -590,7 +606,7 @@ color: whitesmoke;
 }
 
 .btn:hover {
-  background: linear-gradient(90deg, #0099ff, #00ffff);
+  background: linear-gradient(90deg, #111112, #00ffff);
   box-shadow: 0 0 15px #00ffff88;
   transform: scale(1.02);
 }
@@ -598,8 +614,7 @@ color: whitesmoke;
 
 .lab-footer {
 
-    background: linear-gradient(90deg, #0099ff, #00ffff);
-
+    background:rgb(12, 11, 11);
   
   padding: 50px 20px 30px;
   font-family: 'Arial', sans-serif;
