@@ -261,156 +261,148 @@ h2, h3 {
 
 /* services services  */
 
+/* === Services Section Wrapper === */
+
+
+
 
 .services {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 0 20px;
-  color: #333;
-  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+  padding: 5rem 2rem;
+  background: #e7ecf5; /* soft gray-blue */
+  color: #1a1a1a;
 }
 
-.services > h3 {
-  font-size: 2.2rem;
+.services h3 {
   text-align: center;
-  margin-bottom: 10px;
-  color: #1a3e72;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #333;
 }
 
 .services > p {
   text-align: center;
-  font-size: 1.1rem;
-  margin-bottom: 35px;
-  color: #555;
+  margin: 0 auto 2.5rem;
+  max-width: 750px;
+  opacity: 0.7;
+  font-size: 1rem;
 }
 
+/* === Services List Card === */
 .five-list-service {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content:space-evenly;
-  margin-bottom: 50px;
-  gap:111px;
+  max-width: 900px;
+  margin: 0 auto 4rem;
+  /* background: #045bfc; */
+  line-height: 17px;
+  padding: 2.5rem;
+  border-radius: 7px;
+  box-shadow: 9px 9px 20px #c2c7d3, -9px -9px 20px #fff;
 }
 
-  
-
-/* Food hygiene nested list container */
 .foodhyg-list ul {
-  list-style-type: none;
+  font-weight: 300;
+  list-style: none;
   padding-left: 0;
-  margin-bottom: 0;
+  /* background: red; */
+  line-height: 24px;
+  font-size: 1rem;
 }
 
-/* Main service list styling */
-.five-list-service > ul {
-  list-style: decimal inside;
-  flex: 1 1 300px;
+.foodhyg-list li {
+  margin-bottom: .7rem;
+}
+
+.foodhyg-list strong.monsta {
+  display: block;
+  margin-bottom: .4rem;
   font-weight: 600;
-  color: #1a3e72;
-  padding-left: 20px;
-  margin: 0;
+  color: #0a3d62;
 }
 
-/* Nested sub-list for Food Hygiene */
-.foodhyg-list ul ul {
-  list-style-type: lower-alpha;
-  margin-left: 20px;
-  font-weight: normal;
-  color: #444;
-}
-
-/* Remove double bullet for nested ul inside li */
-.foodhyg-list > ul > li {
-  margin-bottom: 8px;
-}
-
-.service-explained {
-  display: flex;
-  flex-direction: column;
-  /* gap: 50px; */
-}
-
-.foodexplanation h3 {
-  color: #1a3e72;
-  margin-bottom: 15px;
-  font-size: 1.4rem;
+.classy{
+margin-left:3rem;
 }
 
 .monsta{
-  color: #1a3e72;
-  font-weight:900;
-
+font-weight:900;
+background:red;
+}
+.foodhyg-list > ul > li > ul {
+  margin-left: 1.4rem;
+  margin-top: .4rem;
+  opacity: .8;
+  font-size: .95rem;
 }
 
-.foodexplanation p {
-  margin-bottom: 20px;
-  font-size: 1rem;
-  color: #444;
+/* === Explanation Block Styling === */
+.service-explained {
+  display: grid;
+  gap: 2rem;
+position:relative;
+top:7rem;
+  background: red;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.foodexplanation {
+  background: #e7ecf5;
+  border-radius: 25px;
+  line-height: 35px;
+  padding: 2.5rem;
+  box-shadow: inset 9px 9px 20px #c2c7d3,
+              inset -9px -9px 20px #fff;
+  margin-bottom: 2rem;
+  grid-column: 1/-1;
+}
+
+.foodexplanation h3 {
+  font-size: 1.8rem;
+  margin-bottom: .8rem;
+  color: #0a3d62;
 }
 
 .foodexplanation h6 {
-  margin: 10px 0;
+  margin: .6rem 0;
   font-weight: 400;
-  font-size: 14px;
+  font-size: .95rem;
 }
 
-.eef-explaining-the-4-images {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-  gap: 2rem;
-  padding: 2rem 1rem;
-}
-
-
+/* === Service Cards (Bottom 4) === */
 .otherandimage {
-  background: #15d2e4;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background: #e7ecf5;
+  border-radius: 25px;
   overflow: hidden;
+  box-shadow: 9px 9px 20px #c2c7d3, -9px -9px 20px #fff;
+  transition: transform .4s ease, box-shadow .4s ease;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.4s ease;
-  cursor: pointer;
-  position: relative;
 }
 
-/* Hover with gradient and motion */
 .otherandimage:hover {
-  transform: translateY(-6px) scale(1.02);
-  background: linear-gradient(135deg,rgb(246, 243, 243), #f6fbfc, #050505);
-
+  transform: translateY(-6px);
+  box-shadow: 15px 15px 30px #c2c7d3, -15px -15px 30px #fff;
 }
 
-/* Optional: inner image zoom effect */
 .otherandimage img {
-  transition: transform 0.4s ease;
+  width:100%;
+  height:220px;
+  object-fit:cover;
 }
 
-.otherandimage:hover img {
-  transform: scale(1.05);
+.otherandimage > div {
+  padding: 1.7rem;
 }
-
 
 .otherandimage h2 {
+  margin-bottom: .5rem;
   font-size: 1.25rem;
-  margin: 1rem 1rem 0.5rem;
-  color: #2d3e50;
+  color: #0a3d62;
 }
 
 .otherandimage p {
-  font-size: 1rem;
-  margin: 0 1rem 1rem;
-  line-height: 1.6;
-  color: #444;
-}
-
-.otherandimage img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  display: block;
-  border-top: 1px solid #eee;
-  margin-top: auto;
+  opacity: .8;
+  font-size: .95rem;
+  line-height: 1.55;
 }
 
 
