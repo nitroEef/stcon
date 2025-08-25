@@ -264,12 +264,10 @@ h2, h3 {
 /* === Services Section Wrapper === */
 
 
-
-
 .services {
   font-family: 'Poppins', sans-serif;
   padding: 5rem 2rem;
-  background: #e7ecf5; /* soft gray-blue */
+  background:rgba(171, 239, 247, 0);
   color: #1a1a1a;
 }
 
@@ -280,9 +278,11 @@ h2, h3 {
   color: #333;
 }
 
+
+
 .services > p {
   text-align: center;
-  margin: 0 auto 2.5rem;
+  margin: 2rem auto 2.5rem;
   max-width: 750px;
   opacity: 0.7;
   font-size: 1rem;
@@ -292,18 +292,18 @@ h2, h3 {
 .five-list-service {
   max-width: 900px;
   margin: 0 auto 4rem;
-  /* background: #045bfc; */
   line-height: 17px;
   padding: 2.5rem;
-  border-radius: 7px;
-  box-shadow: 9px 9px 20px #c2c7d3, -9px -9px 20px #fff;
-}
+  background: #84dbf324;
 
+  border-radius: 7px;
+  box-shadow: 9px 9px 20px #c5d3f4, -9px -9px 20px #fff;
+}
 .foodhyg-list ul {
   font-weight: 300;
   list-style: none;
+
   padding-left: 0;
-  /* background: red; */
   line-height: 24px;
   font-size: 1rem;
 }
@@ -321,18 +321,20 @@ h2, h3 {
 
 .classy{
 margin-left:3rem;
+font-size: 12px;
+line-height: 3px;
 }
-
+/* 
 .monsta{
 font-weight:900;
 background:red;
-}
-.foodhyg-list > ul > li > ul {
+} */
+/* .foodhyg-list > ul > li > ul {
   margin-left: 1.4rem;
   margin-top: .4rem;
   opacity: .8;
   font-size: .95rem;
-}
+} */
 
 /* === Explanation Block Styling === */
 .service-explained {
@@ -340,18 +342,18 @@ background:red;
   gap: 2rem;
 position:relative;
 top:7rem;
-  background: red;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
 .foodexplanation {
-  background: #e7ecf5;
-  border-radius: 25px;
+  background:white;
+ 
+  margin-top: 2rem;
+  border-radius: 15px;
   line-height: 35px;
   padding: 2.5rem;
-  box-shadow: inset 9px 9px 20px #c2c7d3,
+  box-shadow: inset 2px 3px 1px #43d1f86f,
               inset -9px -9px 20px #fff;
-  margin-bottom: 2rem;
   grid-column: 1/-1;
 }
 
@@ -369,13 +371,15 @@ top:7rem;
 
 /* === Service Cards (Bottom 4) === */
 .otherandimage {
-  background: #e7ecf5;
   border-radius: 25px;
   overflow: hidden;
   box-shadow: 9px 9px 20px #c2c7d3, -9px -9px 20px #fff;
   transition: transform .4s ease, box-shadow .4s ease;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
+  background:linear-gradient(green, white);
 }
 
 .otherandimage:hover {
