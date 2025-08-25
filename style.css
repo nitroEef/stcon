@@ -341,7 +341,6 @@ background:red;
   display: grid;
   gap: 2rem;
 position:relative;
-top:7rem;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
@@ -354,7 +353,7 @@ top:7rem;
   padding: 2.5rem;
   box-shadow: inset 2px 3px 1px #43d1f86f,
               inset -9px -9px 20px #fff;
-  grid-column: 1/-1;
+  grid-column: 2/-1;
 }
 
 .foodexplanation h3 {
