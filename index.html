@@ -143,39 +143,44 @@
        
        <!-- Water Quality --> <div class="eef-explaining-the-4-images" data-aos="zoom-in">
          <div class="otherandimage"> 
-          <div> 
-            <h2>Water Quality Analysis and Control</h2> <p> We test water samples to determine
+           <img src="./pictufe/first.avif" alt="Water testing"> 
+           <div> 
+            <h2>Water Quality Analysis and Control</h2> 
+            <p> We test water samples to determine
        contaminants and impurities, ensuring safety for human use,aquatic life, and agriculture. 
        We perform physicochemical and bacteriological analyses using ISO 17025 and IPAN-accredited labs. </p> 
       </div> 
-      <img src="./pictufe/pexels-photo-2280571.webp" alt="Water testing"> 
-    </div> <div class="otherandimage">
+    </div> 
     
+    
+    <div class="otherandimage">
+      <img src="./pictufe/kkk.avif" alt="Legionella testing"> 
     <div> 
   <h2>Legionella Analysis</h2>
  <p> Legionella bacteria can cause Legionnaires’ disease and Pontiac Fever
   . We help identify, analyze, and control potential areas of infestation, 
   especially in systems that aerosolize water. </p>
  </div>
-  <img src="./pictufe/tutue.avif" alt="Legionella testing"> 
-</div> <div class="otherandimage">
-  
+</div> 
+
+<div class="otherandimage">
+  <img src="./pictufe/wh.webp" alt="Air quality testing"> 
   <div>
      <h2>Microbial Quality of Indoor Air</h2> 
      <p> We evaluate airborne microorganisms in indoor environments to control pathogens. 
       Our scientists provide detailed reports and recommendations. </p> 
     </div>
-     <img src="./pictufe/juju.avif" alt="Air quality testing"> 
     </div>
     
     
     <div class="otherandimage"> 
-      <div> <h2>Supply and Installation of Laboratory Equipment</h2>
+      <img src="./pictufe/kk.avif" alt="Lab equipment"> 
+      <div>
+         <h2>Supply and Installation of Laboratory Equipment</h2>
          <p> We supply lab equipment, chemicals, glassware, and consumables for 
           research and schools. We offer expert advice, quality products, installation, 
           and end-user training. </p>
          </div> 
-         <img src="./pictufe/pop.avif" alt="Lab equipment"> </div> 
         </div>
        </div> 
       </section> 
@@ -206,33 +211,43 @@ git commit -m "your message"
 git pull origin main --rebase
 git push origin main
  -->
+<div class="contact" data-aos="zoom-in" id="pemi">
+  <div class="contact-wrapper">
+    
+     <div class="contact-image-side">
+      <img src="./pictufe/juju.avif" alt="Contact Illustration" />
+    </div>
+    
+    <!-- LEFT SIDE: FORM & HEADING -->
+    <div class="contact-form-side">
+      <h2>Contact Us</h2>
+      <form>
+        <div class="input-group">
+          <input type="text" name="name" id="name" required />
+          <label for="name">Name</label>
+        </div>
 
+        <div class="input-group">
+          <input type="email" name="email" id="email" required />
+          <label for="email">Email</label>
+        </div>
 
-<div class="contact"  data-aos="zoom-in" id="pemi">
-  <h2>Contact Us</h2>
-  <form>
-    <div class="input-group">
-      <input type="text" name="name" id="name" required />
-      <label for="name">Name</label>
+        <div class="input-group">
+          <input type="text" name="subject" id="subject" required />
+          <label for="subject">Subject</label>
+        </div>
+
+        <div class="input-group">
+          <textarea name="message" id="message" required></textarea>
+          <label for="message">Message</label>
+        </div>
+
+        <button type="button" class="btn" onclick="sendEmail()">Send</button>
+      </form>
     </div>
 
-    <div class="input-group">
-      <input type="email" name="email" id="email" required />
-      <label for="email">Email</label>
-    </div>
-
-    <div class="input-group">
-      <input type="text" name="subject" id="subject" required />
-      <label for="subject">Subject</label>
-    </div>
-
-    <div class="input-group">
-      <textarea name="message" id="message" required></textarea>
-      <label for="message">Message</label>
-    </div>
-
-    <button type="button" class="btn" onclick="sendEmail()">Send</button>
-  </form>
+   
+  </div>
 </div>
 
 
