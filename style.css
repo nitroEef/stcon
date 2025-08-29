@@ -328,7 +328,7 @@ line-height: 3px;
 /* === Explanation Block Styling === */
 .service-explained {
 position:relative;
-top:7rem;
+bottom:5rem;
 
 }
 
@@ -370,7 +370,7 @@ top:7rem;
   display: flex;
   flex-wrap: wrap;         /* allow wrapping into next line */
   justify-content: center; /* center items horizontally */
-  gap: 1.5rem;
+  gap:2rem;
   margin-top: 2rem;
 }
 
@@ -451,6 +451,7 @@ top:7rem;
   align-items: center;
   overflow: hidden;
   z-index: 1;
+  bottom:6rem;
   min-height: 400px; /* Adjust as needed */
 }
 .bg-video {

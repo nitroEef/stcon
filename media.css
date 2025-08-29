@@ -293,7 +293,7 @@ margin-top: -11rem;
   
 .service-explained {
 
-margin-top: -11rem;
+margin-top: -1rem;
 }
 
   .clients-box {
@@ -329,7 +329,44 @@ margin-top: -11rem;
    .footer-container {
     text-align: center;
 }
+ /* Small screens: full width + stacked */
+  .contact-wrapper {
+    flex-direction: column;   /* stack form & image */
+    width: 100%;              /* full width */
+    max-width: 100%;          /* no fixed max width */
+    border-radius: 0;         /* optional: edge-to-edge look */
+  }
+
+  .contact-form-side {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .contact-image-side {
+    width: 100%;
+  }
+
+  .contact-image-side img {
+    width: 100%;
+    height: auto;
+    border-left: none;
+    border-top: 4px solid #0bbdee; /* small style touch */
+    border-radius: 0;              /* match full width */
+  }
+
+  .btn {
+    width: 100%; /* full width button */
+  }
+
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -418,7 +455,7 @@ margin-top: -11rem;
 
 .service-explained {
 
-margin-top: -11rem;
+margin-top: -1rem;
 }
 
 .foodexplanation h3{
@@ -458,14 +495,39 @@ margin-top: -11rem;
     text-align: center;
 }
 
-  .contact-wrapper {
-    flex-direction: column;
+.contact-wrapper {
+    flex-direction: column;   /* stack form & image */
+    width: 100%;              /* full width */
+    max-width: 100%;          /* no fixed max width */
+    border-radius: 0;         /* optional: edge-to-edge look */
+  }
+
+  .contact-form-side {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .contact-image-side {
+    width: 100%;
+  }
+  .contact-form-side h2{
+    font-size:22px;
+    text-align: center;
   }
 
   .contact-image-side img {
+    width: 100%;
+    height: auto;
     border-left: none;
-    border-top: 4px solid #0bbdee;
+    border-top: 4px solid #0bbdee; /* small style touch */
+    border-radius: 0;              /* match full width */
   }
+
+  .btn {
+    width: 100%; /* full width button */
+  }
+
+
 }
 
 
